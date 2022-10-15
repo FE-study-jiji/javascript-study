@@ -13,5 +13,18 @@
 - 코드의 동작방법에 대한 설명 등, 코드를 읽어서 알 수 있는 내용은 들어가지 않는 게 좋습니다.
 
 ### 04 닌자 코드
+- Behavior Driven Development(BDD)는 test, documentation, example 을 모아놓은 개념입니다.
+- 코드를 작성하기 전 코드가 할 일을 자연어로 표현한 것을 BDD에선 명세서 또는 스펙이라 부릅니다.  
+  스펙은 세 가지 구성요소(`describe`, `it`, `assert.*`)로 이루어집니다.
+- 하나의 테스트(`it`)에선 한 가지만 확인합니다. `for`문이나 중첩 `describe`를 사용할 수 있습니다.
+- `before/after`와 `beforeEach/afterEach`
+
 ### 05 테스트 자동화와 Mocha
+- Behavior Driven Development(BDD)는 test, documentation, example을 한데 모아놓은 개념입니다.
+- 명세서 혹은 스펙은 `describe` `it` `assert.*`로 구성됩니다.
+- 테스트(`it`) 하나에선 한 가지만 확인하도록 합니다.
+- `before/after`와 `beforeEach/afterEach`
+
 ### 06 폴리필
+- 바벨은 모던 자바스크립트 코드를 구 표준을 준수하는 코드로 바꿔주는 트랜스파일러 입니다.
+- 기존 코드가 구 표준을 준수하는 코드로 변경하는 트랜스파일러와 추가된 내장 함수 표준을 준수할 수 있게 함수를 구현하거나 수정하는 폴리필 역할을 합니다.
