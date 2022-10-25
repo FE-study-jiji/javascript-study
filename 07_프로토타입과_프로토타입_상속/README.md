@@ -1,4 +1,19 @@
 # 07 프로토타입과 프로토타입 상속
+### 01 프로토타입 상속
+- 객체는 숨김 프로퍼티 `[[Prototype]]`로 `null`이나 다른 객체를 참조합니다. 이 참조 대상을 '프로토타입'이라 부릅니다.
+- 객체에 프로퍼티가 없으면 프로토타입에서 찾습니다. 이를 '프로토타입 상속'이라 합니다.
+- `__proto__`는 `[[Prototype]]`용 getter/setter입니다. 최근엔 대신 `Object.getPrototypeOf`나 `Object.setPrototypeOf`을 사용합니다.
+- 객체엔 오직 하나의 `[[Prototype]]`만 있을 수 있지만, 프로토타입 체이닝은 가능합니다.
+- `for..in`은 상속 프로퍼티도 순회합니다. (단, `Object.prototype` 메소드는 제외)
+
+### 02 함수의 prototype 프로퍼티
+- new와 생성자 함수로 만든 객체는 생성자 함수의 prototype 프로퍼티가 객체인 경우, 이 정보를 사용해 객체의 `[[Prototype]]`을 설정합니다.
+- 모든 함수는 디폴트로 prototype을 갖고, 
+  prototype은 constructor 프로퍼티 하나를 가지는 객체를 가리키는데,
+  이 constructor 는 함수 자신을 가리킵니다.
+- constructor 프로퍼티를 사용해 기존 객체의 constructor로 새로운 객체를 만들 수 있습니다.
+  단, 자바스크립트는 올바른 constructor 값을 보장하지 않습니다.
+- 모든 함수는 기본적으로 `F.prototype = { constructor : F }`를 가지고 있으므로 "constructor" 프로퍼티를 사용하면 객체의 생성자를 얻을 수 있습니다.
 
 ### 03 내장 객체의 프로토타입
 - 모든 내장 객체는 프로토타입에 메서드를 저장하고, 객체 자체엔 데이터만 저장합니다.
